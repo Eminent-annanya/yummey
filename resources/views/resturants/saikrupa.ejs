@@ -1,0 +1,30 @@
+<section>
+    <div class="shadow">
+        <img class="mx-auto w-80" src="/img/menus.png" alt="rasturant png">
+    </div>
+    <section class="bg-gray-900 py-4">
+        <div class="w-40 bg-white px-2 mt-4 mb-8">
+            <h1 class="font-bold text-lg uppercase">lunch menu :</h1>
+        </div>
+        <!-- carsds -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
+            <% menu.forEach(function(menu) { %>
+            <div class="ml-8 mt-8 w-64 bg-white py-4 drop-shadow-md">
+                <img class="h-40 mt-4 mx-auto" src="/img/<%= menu.images%>" alt="">
+                <div class="mt-2 text-center">
+                    <h2 class="text-lg font-bold"><%= menu.name%></h2>
+                    <h3 class="py-1 px-4 rounded-full uppercase text-xs font-bold">Get up to 30% off</h3>
+                    <span class="size py-1 px-4 rounded-full uppercase text-xs"><%= menu.quantity%></span>
+                    <div class="flex items-center justify-around mt-4">
+                        <span class="mt-1 font-bold text-lg">Rs-<%= menu.price%></span>
+                        <button data-menu="<%= JSON.stringify(menu)%>" class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </section>
+</section>

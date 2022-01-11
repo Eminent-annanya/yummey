@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" href="favicon.png" type="type/x-icon"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <title>Yummey</title>
+    <script src="https://kit.fontawesome.com/0c35a5b0fb.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <!-- nav bar code -->
+    <nav class="container mx-auto md:flex items-center justify-between py-2 px-4">
+        <div class="flex py-4">
+            <a href="/admin">
+                <img class="w-40" src="/img/logo 1.png" alt="logo image">
+            </a>
+            <!-- <input name="location" class="border border-grey-400 p-2 w-1/2" type="text" placeholder="Enter Location"> -->
+        </div>
+        <div class="nav py-4 px-4">
+            <ul class="new md:text-xl text-xs flex items-center">
+                <!-- <input name="Search" class="border border-grey-400 p-2" type="text" placeholder="Serch"> -->
+                <li class="ml-5"><a href="/resturant">Resturants</a></li>
+                <% if(user) { %>
+                    <li class="ml-5"><a href="/cart/order">Orders</a></li>  
+                    <li class="ml-5">
+                        <form id="logout" action="/logout" method="POST">   
+                            <a onclick="document.getElementById('logout').submit()" href="#">Signout</a>
+                        </form>
+                    </li>
+                <% } else { %>
+                <li class="ml-5"><a href="/signin">Sign in</a></li>
+                <li class="ml-5"><a href="/signup">Sign up</a></li>
+                <% } %>
+                <li class="ml-5"><a href="/cart" class="inline-block px-4 py-2 rounded-full flex items-center">
+                    <span id="cartCounter" class="pr-2"><%= session.cart ? session.cart.totalQty : '' %></span>
+                    <p>Cart</p>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+    <%- body %>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>

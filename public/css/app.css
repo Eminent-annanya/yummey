@@ -1,0 +1,314 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 0%;
+  margin: 0%;
+}
+
+nav li:last-child a {
+  background: #000329;
+  color: white;
+}
+nav li:last-child a :hover {
+  background: #2E36D9;
+}
+
+nav li a {
+  transition: all 0.3s ease-in-out;
+}
+nav li a:hover {
+  color: #2E36D9;
+}
+
+.hero {
+  width: 100%;
+  height: 70vh;
+  background-image: url("/img/bg02.jpg");
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  border-radius: 0 0 0 0;
+}
+
+.tags {
+  background-color: #000329;
+  color: white;
+}
+
+.fresh {
+  width: 100%;
+  height: 30vh;
+  background-image: url("/img/yummeyfresh.jpg");
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  border-radius: 0 0 0 0;
+}
+
+.store {
+  width: 100%;
+  height: 30vh;
+  background-image: url("/img/yummeymart.jpg");
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  border-radius: 0 0 0 0;
+}
+
+.helth {
+  width: 100%;
+  height: 30vh;
+  background-image: url("/img/yummeyhelth.jpg");
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  border-radius: 0 0 0 0;
+}
+
+.medi {
+  width: 100%;
+  height: 30vh;
+  background-image: url("/img/yummeymedicare.jpg");
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  border-radius: 0 0 0 0;
+}
+
+.btn {
+  width: 160px;
+  height: 50px;
+  background-color: whitesmoke;
+  color: #000329;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 45px;
+  border-radius: 5px;
+}
+.btn :hover {
+  background-color: #2E36D9;
+  color: white;
+}
+
+.tagtop {
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/img/yummeyfresh.jpg");
+}
+
+.tagtoop {
+  background-image: url("/img/yummeymart.jpg");
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tagtopo {
+  background-image: url("/img/yummeyhelth.jpg");
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tagtopp {
+  background-image: url("/img/yummeymedicare.jpg");
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero {
+  background-color: #000329;
+  color: white;
+  border-radius: 2%;
+}
+.hero:hover {
+  background-color: #0B0B0B;
+  border-color: white;
+  color: white;
+}
+
+.size {
+  background: #5a5a5a;
+}
+
+.add-to-cart {
+  border: 2px solid #0B0B0B;
+  color: #0B0B0B;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.add-to-cart:hover {
+  background-color: #0B0B0B;
+  border-color: white;
+  color: white;
+}
+
+.add-to-carte {
+  border: 2px solid #0B0B0B;
+  color: #0B0B0B;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.add-to-carte:hover {
+  background-color: #0B0B0B;
+  border-color: white;
+  color: white;
+}
+
+.remove-form-cart {
+  border: 2px solid #0B0B0B;
+  color: #0B0B0B;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.remove-form-cart:hover {
+  background-color: #0B0B0B;
+  border-color: white;
+  color: white;
+}
+
+.run {
+  border: 2px transparent #000329;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.run:hover {
+  background-color: transparent #2E36D9;
+  border: solid #2E36D9;
+}
+
+section.cart {
+  background: #5a5a5a;
+}
+
+.ammount {
+  color: #2E36D9;
+}
+
+.simg {
+  width: 100%;
+  height: 120vh;
+  background-color: black;
+  background-image: url("/img/signin.png");
+  background-position: center top;
+  background-size: cover;
+}
+
+a.link {
+  color: #2E36D9;
+}
+
+section.status {
+  background: #F8F8F8;
+  min-height: calc(100vh - 86px);
+}
+
+.status-box {
+  padding: 60px 0 0;
+}
+
+.status-box ul {
+  margin-left: 84px;
+}
+
+.status-box ul li span {
+  position: relative;
+  padding-left: 20px;
+}
+
+.status-box ul li span:after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  background: #000329;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 1px 10px #F8F8F8;
+}
+
+.status-box ul li {
+  position: relative;
+}
+
+.status-box ul li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -6px;
+  width: 2px;
+  height: 100%;
+  background: #000329;
+  margin-top: 10px;
+}
+
+.status-box ul li:nth-child(5) span:after {
+  box-shadow: 0 20px 1px 20px #F8F8F8;
+}
+
+.status-box ul li.step-completed:before {
+  background: #5a5a5a;
+}
+
+.status-box ul li.step-completed span:after {
+  background: #5a5a5a;
+}
+
+.status-box ul li.step-completed span {
+  color: #5a5a5a;
+}
+
+.status-box ul li.current span {
+  color: #e41212;
+}
+
+.status-box ul li.current span:after {
+  background: #e41212;
+}
+
+.status-box ul li small {
+  float: right;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+@media (max-width: 1060) {
+  .container {
+    max-width: 90%;
+  }
+}
+@media (max-width: 767) {
+  .container {
+    max-width: 90%;
+  }
+
+  .btn {
+    width: 90px;
+    height: 30px;
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 537) {
+  .new {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,339 @@
+@import './variables.scss';
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 0%;
+    margin: 0%;
+}
+
+nav li:last-child a {
+    background: $dark;
+    color: white;
+    & :hover{
+        background: $primary-hower;
+    }
+}
+
+nav li a {
+    transition: $smooth;
+    &:hover {
+        color: $primary-hower;
+    }
+}
+
+
+.hero{
+width: 100%;
+height: 70vh;
+background-image: url("/img/bg02.jpg");
+background-attachment: scroll;
+background-position: center top;
+background-size: cover;
+background-repeat: no-repeat;
+color: #fff;
+border-radius: 0 0 0 0;
+}
+
+
+.tags{
+    background-color: $dark;
+    color: white;
+}
+
+
+
+.fresh{
+    width: 100%;
+height: 30vh;
+background-image: url("/img/yummeyfresh.jpg");
+background-attachment: scroll;
+background-position: center top;
+background-size: cover;
+background-repeat: no-repeat;
+color: #fff;
+border-radius: 0 0 0 0;
+}
+
+.store {
+    width: 100%;
+    height: 30vh;
+    background-image: url("/img/yummeymart.jpg");
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    border-radius: 0 0 0 0;
+}
+
+.helth {
+    width: 100%;
+    height: 30vh;
+    background-image: url("/img/yummeyhelth.jpg");
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    border-radius: 0 0 0 0;
+}
+
+.medi {
+    width: 100%;
+    height: 30vh;
+    background-image: url("/img/yummeymedicare.jpg");
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    border-radius: 0 0 0 0;
+}
+
+.btn {
+    width: 160px;
+    height: 50px;
+    background-color: whitesmoke;
+    color: #000329;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 45px;
+    border-radius: 5px;
+    & :hover {
+        background-color: $primary-hower;
+        color: $pure;
+    }
+}
+
+
+.tagtop {
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/img/yummeyfresh.jpg");
+}
+
+.tagtoop {
+    background-image: url("/img/yummeymart.jpg");
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.tagtopo {
+    background-image: url("/img/yummeyhelth.jpg");
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tagtopp {
+    background-image: url("/img/yummeymedicare.jpg");
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero {
+    background-color: $dark;
+    color: white;
+    border-radius: 2%;
+    &:hover{
+        background-color: $secondary;
+        border-color: $pure;
+        color: $pure;
+    }
+}
+
+.size {
+    background: $grey;
+}
+
+.add-to-cart {
+    border: 2px solid $secondary;
+    color: $secondary;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:hover{
+        background-color: $secondary;
+        border-color: $pure;
+        color: $pure;
+    }
+}
+
+.add-to-carte {
+    border: 2px solid $secondary;
+    color: $secondary;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:hover{
+        background-color: $secondary;
+        border-color: $pure;
+        color: $pure;
+    }
+}
+
+.remove-form-cart {
+    border: 2px solid $secondary;
+    color: $secondary;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:hover{
+        background-color: $secondary;
+        border-color: $pure;
+        color: $pure;
+    }
+}
+
+.run {
+    border: 2px transparent $dark;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &:hover {
+        background-color: transparent $primary-hower;
+        border: solid $primary-hower;
+    }
+}
+
+section.cart {
+    background: $gray;
+}
+
+.ammount {
+    color: $primary-hower;
+}
+
+.simg {
+    width: 100%;
+    height: 120vh;
+    background-color: rgb(0, 0, 0);
+    background-image: url("/img/signin.png");
+    background-position: center top;
+    background-size: cover;
+}
+
+
+a.link {
+    color: $primary-hower;
+}
+
+
+// section.status {
+//     // background: $secondary;
+//     min-height: calc(100vh - 86px);
+// }
+
+// .status-box {
+//     padding: 60px 0 0;
+// }
+
+section.status {
+    background: $bg;
+    min-height: calc(100vh - 86px);
+}
+.status-box {
+    padding: 60px 0 0;
+}
+.status-box ul {
+    margin-left: 84px;
+}
+.status-box ul li span {
+    position: relative;
+    padding-left: 20px;
+}
+// Dots
+.status-box ul li span:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top:50%;
+    background: $dark;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow:0 0 1px 10px $bg;
+}
+
+.status-box ul li {
+    position: relative;
+}
+
+
+// Line
+.status-box ul li:before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: -6px;
+   width: 2px;
+   height: 100%;
+   background: $dark;
+   margin-top: 10px;
+}
+// Last dot
+.status-box ul li:nth-child(5) span:after {
+    box-shadow:0 20px 1px 20px $bg;
+}
+
+// line
+.status-box ul li.step-completed:before {
+    background: $gray;
+}
+
+// dots
+.status-box ul li.step-completed span:after {
+    background: $gray;
+}
+
+// text
+.status-box ul li.step-completed span {
+    color: $gray;
+}
+
+// Current status
+.status-box ul li.current span {
+    color: $bgs;
+}
+
+.status-box ul li.current span:after {
+    background: $bgs;
+}
+
+.status-box ul li small {
+    float: right;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+
+@media(max-width:1060){
+     .container {
+         max-width: 90%;
+     }
+}
+
+
+@media(max-width:767) {
+
+    .container {
+        max-width: 90%;
+    }
+
+    .btn {
+        width: 90px;
+        height: 30px;
+        font-size: 0.5rem;
+    }
+}
+
+@media(max-width:537) {
+    .new {
+        width: fit-content;
+        font-size: 01.1rem;
+    }
+}

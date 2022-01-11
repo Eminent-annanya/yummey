@@ -1,0 +1,49 @@
+<section class="orders light-section">
+    <div class="md:container mx-auto pt-12 px-4 md:px-28">
+        <div class="md:container mx-auto flex items-center">
+            <% if(user) { %>
+            <div class="">
+                <h1 class="text-xl font-bold uppercase"><%= user.name %></h1>
+                <h3><%= user.number %></h3>
+                <h3><%= user.email %></h3>
+            </div>
+            <% } %>
+        </div>
+        <h1 class="font-bold text-lg mb-4 font-sans">All Orders</h1>
+        <hr>
+        <% if(messages.success) { %>
+        <div id="success-alert" class="flex items-center bg-green-500 text-sm font-bold px-4 py-3" role="alert">
+            <img class="w-8" src="/img/smiley.png" alt="smiley icon">
+            <p class="ml-4 pt-1 text-black"><% messages.success %></p>
+        </div>
+        <% } %>
+        <% if(orders.length) { %>
+            <table class="w-full table-auto bg-white">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 text-left">Orders</th>
+                        <th class="px-4 py-2 text-left">Address</th>
+                        <th class="px-4 py-2 text-left">Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% orders.forEach((order) => {  %>
+                    <tr>
+                        <td class="border px-4 py-2"><a class="link" href="/cart/order/<%= order._id %>"><%= order._id %>></a></td>
+                        <td class="border px-4 py-2"><%= order.address %></td>
+                        <td class="border px-4 py-2"><%= moment(order.createdAt).format('hh:mm:ss A') %></td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+            <% } else { %>
+            <a href="/">
+                <div class="flex items-center mx-auto">
+                    <h1>No orders yet</h1> 
+                    <span><a class="link ml-2" href="/resturant">Go and order now..</a></span>
+                </div>
+                <img class="mx-auto" src="/img/orders_img.jpg" alt="No Orders Found">
+            </a>  
+            <% } %>    
+        </div>
+</section>

@@ -1,0 +1,49 @@
+<section class="simg">
+    <!-- <div class="container mx-auto flex items-center justify-between py-2 px-4"> -->
+        <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+            <div class="bg-white px-4 py-4 max-w-md w-full space-y-8">
+              <div class="">
+                <img class="mx-auto w-22 h-20 w-auto" src="img/logo 1.png" alt="Yummey">
+                <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                  Sign in to your account
+                </h2>
+                <p class="mt-2 text-center text-sm text-gray-600">
+                  get role
+                  <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+                     Work with us @ yummey
+                  </a>
+                </p>
+              </div>
+              <form class="mt-8 space-y-6" action="/signin" method="POST">
+                <% if (messages.error) { %>
+                  <span class="text-red-500 text-sm mt-4"><%= messages.error %></span>
+                  <% } %>
+                <input type="hidden" name="remember" value="true">
+                <div class="rounded-md shadow-sm -space-y-px">
+                  <div class="">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+                  </div>
+                  <div>
+                    <label for="password" class="sr-only">Password</label>
+                    <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+                  </div>
+                  <div class="md:px-36">
+                    <button type="submit" class="bg-black px-6 py-2 md:rounded-full text-white font-bold mt-2 hover:text-indigo-500">Sign in</button>
+                  </div>
+                <div>
+                    <p class="m-2 text-center text-sm text-gray-600">
+                        If not signin 
+                        <a href="/signup" class="font-medium text-indigo-600 hover:text-indigo-500">
+                           Create your account now
+                        </a>
+                </div>
+                <hr>
+                <!-- <div class="mt-4 ml-28 py-4 px-4 flex items-center justify-between w-44 h-11 bg-indigo-400 border border-violet-700">
+                    <i class="fab fa-google border border-violet-700 bg-white"></i>
+                    <span>
+                        <p>Google Signin</p>
+                    </span>
+                </div> -->
+    <!-- </div> -->
+</section>

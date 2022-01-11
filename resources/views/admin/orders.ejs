@@ -1,0 +1,28 @@
+<section class="orders light-section">
+    <div class="text-center font-bold">
+        <% if(user) { %>
+        <h1 class="text-lg"><%= user.name %></h1>
+        <h3 class="text-sm"><%= user._id %></h3>
+        <h3 class="test-xs uppercase"><%= user.role %></h3>
+        <p class="text-sm">wel come to your Controll unit over hear</p>
+        <% } %>
+    </div>
+    <div class="container mx-auto pt-12">
+        <h1 class="font-bold text-lg mb-4">All orders</h1>
+        <table class="w-full table-auto bg-white">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2 text-left">Orders</th>
+                    <th class="px-4 py-2 text-left">Customer</th>
+                    <th class="px-4 py-2 text-left">Address</th>
+                    <th class="px-4 py-2 text-left">Pament price</th>
+                    <th class="px-4 py-2 text-left">status</th>
+                    <th class="px-4 py-2 text-left">Placed at</th>
+                    <th class="px-4 py-2 text-left">Payment Status</th>
+                </tr>
+            </thead>
+            <tbody id="orderTableBody">
+            </tbody>
+        </table>
+    </div>
+</section>

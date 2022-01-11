@@ -1,0 +1,120 @@
+<body>
+    <section class= "hero bg-black text-white items-center pt-40 pl-20">
+        <% if(user) { %>
+        <p class="text-xs">Welcome back</p>
+        <h1 class="text-xl md:text-3xl uppercase"><%= user.name %></h1>
+        <% } %>
+        <div class="md:text-sm">
+            <p class="font-bold"><b>Now order you your food from any where online with yummey.in <br>or on call @ (9556307340)</b></p>
+            <% if(user) { %>
+            <a href="/resturant"> 
+                <button class="btn px-6 py-2 rounded-full text-white font-bold mt-4">
+                    Order now 
+                </button>
+            </a>
+            <% } else { %>
+            <a href="/resturant"> 
+                <button class="btn px-6 py-2 rounded-full text-white font-bold mt-4">
+                    Order now 
+                </button>
+            </a>
+            <a href="/signin"> 
+                <button class="btn px-6 py-2 rounded-full text-white font-bold mt-4">
+                    Sign-in 
+                </button>
+            </a>
+            <% } %>
+        </div>
+    </section>
+    <section class="menu container mx-auto py-8">
+        <h1 class="tags text-xl font-bold mb-8 text-center"><a href="/resturant">Resturants</a></h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
+            <% food.forEach(function(food) { %>
+            <div class="run text-center w-full md:w-64">
+                <div>
+                    <a href="/resturant">
+                    <h2 class="text-lg font-bold"><%= food.vendorName%></h2>
+                    <span class="size py-1 px-4 rounded-full uppercase text-xs font-bold"><%= food.rtype%></span>
+                    </a>
+                </div>
+                <img class="h-40 mb-4 mt-4 mx-auto" src="/img/<%= food.image%>">
+            </div>
+            <% }) %>
+        </div>
+    </section>
+
+    <section class="menu container mx-auto py-8">
+        <h1 class="tags text-xl font-bold mb-8 text-center"><a href="/">Yummey % offers</a></h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
+        <% food.forEach(function(food) { %>
+        <div class="w-full md:w-64 mt-8 mx-8">
+            <div class="text-center">
+                <h2 class="text-lg font-bold"><%= food.name %></h2>
+                <h3 class="py-1 px-4 rounded-full uppercase text-xs font-bold">Get up to 30% off</h3>
+                <span class="size py-1 px-4 rounded-full uppercase text-xs"><%= food.quantity %></span>
+                <div class="flex items-center justify-around mt-4">
+                    <span class="mt-1 font-bold text-lg">Rs-<%= food.price %></span>
+                    <button data-menu="<%= JSON.stringify(food)%>" class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                        <span>+</span>
+                        <span class="ml-4">Add</span>
+                    </button>
+                </div>
+            </div>
+            <img class="h-40 mb-4 mt-4 mx-auto" src="/img/<%= food.image %>">
+        </div>
+        <% }) %>
+      </div>
+    </section>
+
+    <section class="menu container mx-auto py-8">
+        <h1 class="tags text-xl font-bold mb-8 text-center"><a href="#">Comming Soon</a></h1>
+        
+        <a href="/fresh">
+            <div class="fresh mt-8 text-right items-center pt-4 pr-8">
+                <h1>Yummey Fresh</h1>
+                <p class="font-bold text-xs">Brings you fresh sweet, vegitables, fish,<br>meat and chiken items</p>
+                <a href="/fresh"> 
+                    <button class="btn md:px-6 md:py-2 rounded-full text-white font-bold mt-4">
+                        Hunt now 
+                    </button>
+                </a>
+            </div>
+        </a>
+       
+        <a href="/mart">
+            <div class="store mt-8 items-center font-bold text-black pt-4 pl-8">
+                <h1 class="text-black">Yummey Mart</h1>
+                <p class="font-bold text-black text-xs">Brings you ration items to your home<br>with just one click</p>
+                <a href="/mart"> 
+                    <button class="btn md:px-6 md:py-2 rounded-full text-black font-bold mt-4">
+                        Hunt now 
+                    </button>
+                </a>
+            </div>
+        </a>
+        
+        <a href="/helth">
+            <div class="helth mt-2 md:mt-8 text-right items-center pt-4 pr-8">
+                <h1>Yummey Helth</h1>
+                <p class="font-bold text-xs">Brings you helthy food, nutrition products<br>with just one click</p>
+                <a href="/helth"> 
+                    <button class="btn px-6 py-2 rounded-full text-white font-bold mt-4">
+                        Hunt now 
+                    </button>
+                </a>
+            </div>
+        </a>
+        
+        <a href="/medicare">
+            <div class="medi mt-8 items-center font-bold text-black pt-4 pl-8">
+                <h1 class="text-black">Yummey Medicare</h1>
+                <p class="font-bold text-black text-xs">Brings you the medicine<br>with just one click</p>
+                <a href="/medicare"> 
+                    <button class="btn px-6 py-2 text-black rounded-full font-bold mt-4">
+                        Hunt now 
+                    </button>
+                </a>
+            </div>
+        </a>
+    </section>
+</body>

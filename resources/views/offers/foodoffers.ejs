@@ -1,0 +1,29 @@
+<section>
+    <img class="h-96 w-full" src="/img/bg18.jpg" alt="% Yummey's Offer Blasts">
+    <div>
+        <div class="flex">
+            <h1 class="text-xl ml-8 mt-8"><a href="/offers">Available Coupens</a></h1>
+            <h1 class="font-bold text-xl ml-8 mt-8"><b><u>Available Offers</u></b></h1>
+        </div>
+        <hr>
+        <div class="grid grid-cols-4 col-gap-12 row-gap-16">
+            <% food.forEach(function(food) { %>
+            <div class="w-64 mt-8 mx-8">
+                <div class="text-center">
+                    <h2 class="text-lg font-bold"><%= food.name %></h2>
+                    <h3 class="py-1 px-4 rounded-full uppercase text-xs font-bold">Get up to 30% off</h3>
+                    <span class="size py-1 px-4 rounded-full uppercase text-xs"><%= food.quantity %></span>
+                    <div class="flex items-center justify-around mt-4">
+                        <span class="mt-1 font-bold text-lg">Rs-<%= food.price %></span>
+                        <button data-menu="<%= JSON.stringify(food)%>" class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                            <span>+</span>
+                            <span class="ml-4">Add</span>
+                        </button>
+                    </div>
+                </div>
+                <img class="h-40 mb-4 mt-4 mx-auto" src="/img/<%= food.image %>">
+            </div>
+            <% }) %>
+          </div>
+    </div>
+</section>

@@ -1,0 +1,24 @@
+<section>
+    <img class="h-96 w-full" src="/img/bg18.jpg" alt="% Yummey's Offer Blasts">
+    <div>
+        <div class="flex">
+            <h1 class="font-bold text-xl ml-8 mt-8"><b><u>Available Coupens</u></b></h1>
+            <h1 class="text-xl ml-8 mt-8"><a href="/offers/food">Available Offers</a></h1>
+        </div>
+        <hr>
+        <div class="flex py-8 px-8 ">
+            <% offer.forEach(function(offer) { %>
+            <div class="text-center items-center mx-auto border-black bg-red-100 w-96 h-80 ml-4 py-4">
+                <p class="font-bold text-lg mt-4"><%= offer.sentence%></p>
+                <p class="text-xs mt-4"><%= offer.details %></p>
+                <h1 class="bg-yellow-400 w-40 ml-20 mt-4 rounded-l-lg border border-dashed border-blue-900"><%= offer.code%></h1>
+                <div class="mt-4 color-blue-800">
+                    <span>+</span>
+                    <span><a href="#">more</a></span>
+                </div>
+                <button data-menu="<%= JSON.stringify(offer)%>" class="btn mt-8">Use Code</button>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,141 @@
+<section class="orders light-section">
+    <div class="text-center font-bold">
+        <% if(user) { %>
+        <h1 class="text-lg"><%= user.name %></h1>
+        <h3 class="text-sm"><%= user._id %></h3>
+        <h3 class="test-xs uppercase"><%= user.role %></h3>
+        <p class="text-sm">wel come to your Menu Controll unit over hear</p>
+        <% } %>
+    </div>
+    <div class="container mx-auto pt-12">
+        <h1 class="font-bold text-lg mb-4">All orders</h1>
+        <table class="w-full table-auto bg-white">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2 text-left">Name</th>
+                    <th class="px-4 py-2 text-left">Price</th>
+                    <th class="px-4 py-2 text-left">Aavalibility</th>
+                    <th class="px-4 py-2 text-left">Aavalibility</th>
+                    <th class="px-4 py-2 text-left">foodtype</th>
+                    <th class="px-4 py-2 text-left">vendorName</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% menu.forEach(function(menu) { %>
+                <tr>
+                    <td class="border px-4 py-2"><%= menu.name %></td>
+                    <td class="border px-4 py-2"><%= menu.price %></td>
+                    <td class="border px-4 py-2">
+                    <div class="inline-block relative w-64">
+                        <form action="/admin/menu/status" method="POST">
+                            <input type="hidden" name="menuId" value="<%= menu._id %>">
+                            <select name="avalibility" onchange="this.form.submit()"
+                                class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                                    <option value="TRUE">TRUE</option>
+                                    <option value="FALSE">FALSE</option>
+                                    <option value="TRUE">TRUE</option>
+                            </select>
+                        </form>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20">
+                                <path
+                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
+                        </div>
+                    </div>    
+                    </td>
+                    <td class="border px-4 py-2">"<%= menu.avalibility %>"</td>
+                    <td class="border px-4 py-2"><%= menu.foodtype %></td>
+                    <td class="border px-4 py-2"><%= menu.vendorName %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <form action="/admin/menu/all" method="POST" class="py-8">
+            <h1>Foodies resturant</h1>
+            <input type="hidden" name="vendorName" value="Foodies resturant">
+            <select name="avalibility" onchange="this.form.submit()"
+            class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                <option value="TRUE">TRUE</option>
+                <option value="FALSE">FALSE</option>
+                <option value="TRUE">TRUE</option>
+        </select>
+        </form>
+        <form action="/admin/menu/all" method="POST" class="py-8">
+            <h1>Dolphin Resturant</h1>
+            <input type="hidden" name="vendorName" value="Dolphin Resturant">
+            <select name="avalibility" onchange="this.form.submit()"
+            class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                <option value="TRUE">TRUE</option>
+                <option value="FALSE">FALSE</option>
+                <option value="TRUE">TRUE</option>
+        </select>
+        </form>
+        <form action="/admin/menu/all" method="POST" class="py-8">
+            <h1>Green chilli resturant</h1>
+            <input type="hidden" name="vendorName" value="Green chilli resturant">
+            <select name="avalibility" onchange="this.form.submit()"
+            class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                <option value="TRUE">TRUE</option>
+                <option value="FALSE">FALSE</option>
+                <option value="TRUE">TRUE</option>
+        </select>
+        </form>
+        <form action="/admin/menu/all" method="POST" class="py-8">
+            <h1>Sai krupa resturant</h1>
+            <input type="hidden" name="vendorName" value="Sai krupa resturant">
+            <select name="avalibility" onchange="this.form.submit()"
+            class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                <option value="TRUE">TRUE</option>
+                <option value="FALSE">FALSE</option>
+                <option value="TRUE">TRUE</option>
+        </select>
+        </form>
+        <form action="/admin/menu/all" method="POST" class="py-8">
+            <h1>Odian Resturant</h1>
+            <input type="hidden" name="vendorName" value="Odian Resturant">
+            <select name="avalibility" onchange="this.form.submit()"
+            class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                <option value="TRUE">TRUE</option>
+                <option value="FALSE">FALSE</option>
+                <option value="TRUE">TRUE</option>
+        </select>
+        </form>
+    </div>
+    <div>
+        <div class="container mx-auto pt-12">
+            <h1 class="font-bold text-lg mb-4">All orders</h1>
+            <table class="w-full table-auto bg-white">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 text-left">Name</th>
+                        <th class="px-4 py-2 text-left">Price</th>
+                        <th class="px-4 py-2 text-left">Aavalibility</th>
+                        <th class="px-4 py-2 text-left">foodtype</th>
+                        <th class="px-4 py-2 text-left">vendorName</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% food.forEach(function(menu) { %>
+                    <tr>
+                        <td class="border px-4 py-2"><%= menu.name %></td>
+                        <td class="border px-4 py-2"><%= menu.price %></td>
+                        <td class="border px-4 py-2">"<%= menu.avalibility %>"</td>
+                        <td class="border px-4 py-2"><%= menu.type %></td>
+                        <td class="border px-4 py-2"><%= menu.vendorName %></td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+            <form action="/admin/menu/oll" method="POST" class="py-8">
+                <select name="avalibility" onchange="this.form.submit()"
+                class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                    <option value="TRUE">TRUE</option>
+                    <option value="FALSE">FALSE</option>
+                    <option value="TRUE">TRUE</option>
+            </select>
+            </form>
+    </div>
+</section>
