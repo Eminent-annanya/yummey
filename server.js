@@ -17,11 +17,19 @@ const flash = require('express-flash');
 const passport = require('passport')
 // emmiter
 const Emitter = require('events')
+// rozer pay
+const Rozerpay = require('razorpay')
+const Crypto = require('crypto')
+
+var instance = new Rozerpay({
+  key_id: process.env.PAY_KEY, 
+  key_secret: process.env.PAY_SECRET,
+});
 
 
 // mongoose setups "database connections"
 async function main() {
-  await mongoose.connect(process.env.MONGO_URL);
+  await mongoose.connect(process.env.MONGO_CONNECTION_URL);
 }
 
 main().catch(err => console.log(err));
@@ -43,7 +51,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   store: MongoStore.create({
-    mongoUrl: process.env.MONGO_URL
+    mongoUrl: process.env.MONGO_CONNECTION_URL
   }) ,
   cookie: {maxAge: 1000 * 60 * 60 * 24 }
 }))

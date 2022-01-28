@@ -1,7 +1,12 @@
 import axios from "axios"
+// import Razorpay from "razorpay"
+// import Crypto from "crypto"
 import Swal from 'sweetalert2'
 
 function initStripe() {
+
+    
+
     const paymentType = document.querySelector('#paymentType')
     if (paymentType) {
         paymentType.addEventListener('change', (e) => {
@@ -12,6 +17,11 @@ function initStripe() {
 
     const payment = document.querySelector("#payment-form");
     if(payment) {
+
+        // var instance = new Razorpay({
+        //     // key_id: process.env.PAY_KEY, 
+        //     // key_secret: process.env.PAY_SECRET,
+        //   });
         
         payment.addEventListener('submit', (e) => {
             e.preventDefault();
